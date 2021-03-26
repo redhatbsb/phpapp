@@ -1,20 +1,13 @@
 apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
-  annotations:
-    openshift.io/host.generated: "true"
-  creationTimestamp: "2021-03-18T18:10:42Z"
   labels:
-    app: debugocp
+    app: phpapp
     app.kubernetes.io/component: debugocp
     app.kubernetes.io/instance: debugocp
-  name: debugocp
-  namespace: debugapp
-  resourceVersion: "8384873"
-  selfLink: /apis/route.openshift.io/v1/namespaces/debugapp/routes/debugocp
-  uid: 407bad82-8815-11eb-b80f-0aaaa8a92a94
+  name: phpapp
+  namespace: phpapp
 spec:
-  host: debugocp-debugapp.18.229.202.29.nip.io
   port:
     targetPort: 8080-tcp
   to:
@@ -22,12 +15,3 @@ spec:
     name: debugocp
     weight: 100
   wildcardPolicy: None
-status:
-  ingress:
-  - conditions:
-    - lastTransitionTime: "2021-03-18T18:10:42Z"
-      status: "True"
-      type: Admitted
-    host: debugocp-debugapp.18.229.202.29.nip.io
-    routerName: router
-    wildcardPolicy: None

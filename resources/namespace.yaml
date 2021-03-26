@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: debugapp
+  name: phpapp
 spec:
   finalizers:
   - kubernetes

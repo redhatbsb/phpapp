@@ -2,18 +2,18 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: debugocp
-    app.kubernetes.io/component: debugocp
-    app.kubernetes.io/instance: debugocp
-  name: debugocp
-  namespace: debugapp
+    app: phpapp
+    app.kubernetes.io/component: phpapp
+    app.kubernetes.io/instance: phpapp
+  name: phpapp
+  namespace: phpapp
 spec:
   progressDeadlineSeconds: 600
   replicas: 1
   revisionHistoryLimit: 10
   selector:
     matchLabels:
-      deployment: debugocp
+      deployment: phpapp
   strategy:
     rollingUpdate:
       maxSurge: 25%
@@ -25,7 +25,7 @@ spec:
         openshift.io/generated-by: OpenShiftNewApp
       creationTimestamp: null
       labels:
-        deployment: debugocp
+        deployment: phpapp
     spec:
       containers:
       - image: docker.io/lasher/debugocp
