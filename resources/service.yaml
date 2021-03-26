@@ -1,0 +1,32 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    openshift.io/generated-by: OpenShiftNewApp
+  creationTimestamp: "2021-03-18T18:10:33Z"
+  labels:
+    app: debugocp
+    app.kubernetes.io/component: debugocp
+    app.kubernetes.io/instance: debugocp
+  name: debugocp
+  namespace: debugapp
+  resourceVersion: "8384641"
+  selfLink: /api/v1/namespaces/debugapp/services/debugocp
+  uid: 3b3293e0-8815-11eb-b80f-0aaaa8a92a94
+spec:
+  clusterIP: 172.30.116.226
+  ports:
+  - name: 80-tcp
+    port: 80
+    protocol: TCP
+    targetPort: 80
+  - name: 8080-tcp
+    port: 8080
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    deployment: debugocp
+  sessionAffinity: None
+  type: ClusterIP
+status:
+  loadBalancer: {}
