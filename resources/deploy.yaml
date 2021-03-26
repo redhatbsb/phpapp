@@ -30,7 +30,7 @@ spec:
       containers:
       - image: docker.io/lasher/debugocp
         imagePullPolicy: IfNotPresent
-        name: debugocp
+        name: phpapp
         ports:
         - containerPort: 8080
           protocol: TCP
