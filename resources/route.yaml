@@ -1,17 +1,11 @@
 apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
-  labels:
-    app: phpapp
-    app.kubernetes.io/component: debugocp
-    app.kubernetes.io/instance: debugocp
   name: phpapp
-  namespace: phpapp
+  labels:
+    name: phpapp
 spec:
-  port:
-    targetPort: 8080-tcp
+  path: "/"
   to:
     kind: Service
-    name: debugocp
-    weight: 100
-  wildcardPolicy: None
+    name: phpapp
