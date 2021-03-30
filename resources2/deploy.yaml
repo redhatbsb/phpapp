@@ -3,8 +3,8 @@ kind: Deployment
 metadata:
   labels:
     app: phpapp7
-    app.kubernetes.io/component: phpapp
-    app.kubernetes.io/instance: phpapp
+    app.kubernetes.io/component: phpapp7
+    app.kubernetes.io/instance: phpapp7
   name: phpapp7
   namespace: phpapp7
 spec:
