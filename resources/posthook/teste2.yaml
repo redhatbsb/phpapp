@@ -1,0 +1,4 @@
+- hosts: localhost
+  tasks:
+  - name: Executa playbook teste 2
+    shell: "echo teste2"

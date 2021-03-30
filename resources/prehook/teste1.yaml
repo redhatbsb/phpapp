@@ -1,0 +1,5 @@
+- hosts: localhost
+  tasks: 
+  - name: Executa role teste1
+    import_role:
+       name: teste1
