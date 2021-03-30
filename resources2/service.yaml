@@ -1,0 +1,24 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+  labels:
+    app: phpapp7
+    app.kubernetes.io/component: phpapp7
+    app.kubernetes.io/instance: phpapp7
+  name: phpapp7
+  namespace: phpapp7
+spec:
+  ports:
+  - name: 80-tcp
+    port: 80
+    protocol: TCP
+    targetPort: 80
+  - name: 8080-tcp
+    port: 8080
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    deployment: phpapp7
+  sessionAffinity: None
+  type: ClusterIP
