@@ -1,0 +1,8 @@
+apiVersion: tower.ansible.com/v1alpha1
+kind: AnsibleJob
+metadata:
+  generateName: teste2
+  namespace: phpapp
+spec:
+  tower_auth_secret: toweraccess
+  job_template_name: teste2
