@@ -2,6 +2,7 @@ apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
   name: phpapp
+  namespace: phpapp
   labels:
     name: phpapp
 spec:
